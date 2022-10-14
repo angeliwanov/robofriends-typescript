@@ -1,6 +1,13 @@
 import React from "react";
 
-const Card =  ({id, name, email}) => {
+
+interface CardStatelessProps {
+    key: number,
+    id: string,
+    name: string,
+    email: string
+}
+const Card: React.FunctionComponent<CardStatelessProps> =  ({id, name, email}) => {
     return(
         <div className="tc bg-light-green dib pa3 br3 ma2 grow bw2 shadow-5">
             <img alt='robots' src={`https://robohash.org/${id}?200x200`}/>
